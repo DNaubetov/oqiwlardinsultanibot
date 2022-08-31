@@ -52,9 +52,12 @@ async def contract (message: Message):
     #                                             f'\nСтраница №=\'{number_file_1}\'из\'{len(file.Contractoff)}\'')
 
     # text = f'{file.price}\n'
-    await message.answer_document(file.contractoff)
+    #await message.answer_document(file.contractoff)
     await message.answer_document(file.contract)
     await message.answer(file.price)
     await message.answer(text='⬇Форма для заполнения⬇', reply_markup=inline.contract_button)
-    await message.answer(text='Вы можете оплатить за обучение через клик \nПо номеру телефона\n+998 97 7887944')
+    await message.answer(text='Вы можете оплатить за обучение: '
+                              '\n1) Через клик по номеру телефона (+998 97 7888 79 44) '
+                              '\n2) Через бухгалтера (р/с 20212000100735995001- '
+                              'в данном случае возможен возврат денег с подоходного налога)')
 

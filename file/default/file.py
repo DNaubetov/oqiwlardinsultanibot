@@ -2,8 +2,9 @@
 Hello = 'CAACAgIAAxkBAAIWA189tPqsfX_ukV3ZZrAl9msOlpUoAAImVAACns4LAAGgo10P151lvxsE'
 #Договора
 
-contract ='BQACAgIAAxkBAAIXO18_FXR_nGl2ubYQG6UI_c6phkAcAAKuBwACPlT4SfUZu9r7H3luGwQ'
-contractoff ='BQACAgIAAxkBAAIXPF8_FX0psUjYH1skwZMDo97CVWgiAAKvBwACPlT4SbBDfG7cRiBMGwQ'
+contract = 'BQACAgIAAxkBAAJbs2MPRDYGv6N6razOLXOqy4orHri5AAJMHQACnUd4SLMAATcLJz7h-SkE'
+
+# contractoff ='BQACAgIAAxkBAAIXPF8_FX0psUjYH1skwZMDo97CVWgiAAKvBwACPlT4SbBDfG7cRiBMGwQ'
 # Contract =['AgACAgIAAxkBAAIWU1893Ax4KJw4jO-tSE74LyB5R6sFAALKrTEbjKPwSXYpF7jmD9UqbNoJly4AAwEAAwIAA3kAA-I7AAIbBA'
 #     ,'AgACAgIAAxkBAAIWVF893BLgKksHWAsPVIdIiBVV0pEgAALLrTEbjKPwSUQhavSNiG0etwFFli4AAwEAAwIAA3kAAzzoAAIbBA'
 #     ,'AgACAgIAAxkBAAIWVV893BbVCzpl7r7iwxo453tgO8-eAALMrTEbjKPwSUIZ0iI0NcwdEHHUli4AAwEAAwIAA3kAA3w8AAIbBA'
@@ -70,7 +71,7 @@ educational_supplies='Пропись по русскому языку (В.Г.П�
 \nПенал \nСтёрка\
 \nПростой карандаш ✏ \nРучка️🖊\
 \nАльбом для рисования🗂 \nТочилка\nПластилин\
-\nЦветная бумага с картоном📝 \nКлей\nНожницы✂️\
+\nЦветная бумага с картоном📝 \nКлей\nАкварельные краски 🎨✂️\
 \nБукварь (Н.С.Жукова)📚'
 # цены
 price = '👩‍🎓 Мы предлагаем, для Вашего удобства, 2 варианта обучения Ваших детей👫👫👫 \
@@ -78,7 +79,7 @@ price = '👩‍🎓 Мы предлагаем, для Вашего удобст
 \n\n👭В группе  10-12 учеников👫\
 \n\n✍️Занятия 5 дней в неделю. 👏\
 \n\n👩‍🏫Домашние задания будут выполняться в обычном формате (выступления, презентации, письмо и чтение с учителем). 👨‍🏫\
-\n\n       👍 Цена:250,000 сум.\
+\n\n       👍 Цена:300,000 сум.\
 \n👩‍👧‍👧(Постоянным клиентам предоставляется скидка 10%!!!)👩‍👧‍👦\
 \n\n       👍2 вариант: в приложении Телеграмм📱💻.\
 \n\n👨‍💻Уроки будут проходить в оффлайн формате👩‍💻\
@@ -86,7 +87,7 @@ price = '👩‍🎓 Мы предлагаем, для Вашего удобст
 \n\n✍️Занятия 5 дней в неделю.👏\
 \n\n   👩‍🎓Преподаватель будет высылать Вам видео и аудиоматериал в группу.\
 \n\n👩‍🏫 Домашние задания также будут выполняться  в виде аудио-, видео- и фото-формате. 👨‍🏫\
-\n\n       👍Цена:250.000 сум\
+\n\n       👍Цена:300.000 сум\
 \n👩‍👧‍👦(Постоянным клиентам предоставляется скидка 10%!!!) 👩‍👧‍👧\
 \n\n+998977887944\
 \nМийиргуль Наубетовна\

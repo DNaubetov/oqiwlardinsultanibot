@@ -24,7 +24,7 @@ async def hello(message: Message):
         # если юзера нет в базе, добавляем его
         db.add_users(message.from_user.full_name,message.from_user.id)
     else:
-        await bot.send_message(admin_id,text=f'Пользователь \"{message.from_user.full_name}\" перезапустил бота')
+        await bot.send_message(admin_id, text=f'Пользователь \"{message.from_user.full_name}\" перезапустил бота')
         await message.forward(admin_id)
     if user_id == admin_id:
         await message.answer(f"Привет {message.from_user.full_name}!\nТы админ!", reply_markup=button.adminb)

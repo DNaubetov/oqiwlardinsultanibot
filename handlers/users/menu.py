@@ -11,17 +11,13 @@ from config import admin_id
 
 from aiogram.utils.markdown import hlink
 
-
-
-
 db = sqlighter.SQLighter('database/base/db.db')
 user_admin_id=765032644,635986455,330102092
 
 # мой 635986455
 
-
-url_instagram="\n".join([hlink("📷 Инстаграмм", "https://instagram.com/oqiwlardin_sultani")])
-url_telegramm="\n".join([hlink("📲 Телеграмм", "https://t.me/oqiwlardinsultani")])
+url_instagram = "\n".join([hlink("📷 Инстаграмм", "https://instagram.com/oqiwlardin_sultani")])
+url_telegramm = "\n".join([hlink("📲 Телеграмм", "https://t.me/oqiwlardinsultani")])
 
 
 #Нажатие меню
@@ -72,34 +68,39 @@ async def button2(message: Message):
     await message.answer_photo(file.director, caption="Информация о директоре")
     await message.answer_photo(file.certificate, caption=TEXT)
 
-                              # + hlink("\nТелеграмм", "https://t.me/oqiwlardinsultani")
-                              # + hlink("\nИнстаграмм", "https://instagram.com/oqiwlardin_sultani"))
-
-
 
 @dp.message_handler(Text(equals=["Учебные принадлежности"]))
 async def button3(message: Message):
     user_id = message.from_user.id
     await message.answer(file.educational_supplies)
-    await bot.send_document(user_id,file.study_supplies)
+    await bot.send_document(user_id, file.study_supplies)
 
 
 @dp.message_handler(Text(equals=["Стоимость образовательных услуг"]))
 async def button4(message: Message):
     user_id = message.from_user.id
     await message.answer(file.price)
-    await message.answer(text='Вы можете оплатить за обучение через клик \nПо номеру телефона\n+998 97 7887944')
+    await message.answer(text='Вы можете оплатить за обучение: '
+                              '\n1) Через клик по номеру телефона (+998 97 7888 79 44) '
+                              '\n2) Через бухгалтера (р/с 20212000100735995001- '
+                              'в данном случае возможен возврат денег с подоходного налога)')
+
 
 @dp.message_handler(Text(equals=["Консультация психолога"]))
 async def echo(message: Message):
-    await message.answer(text='Для психологической помощи отправь свои контактные данные нажав на кнопку'
-                              '\n\'Отправить контактные данные\'',reply_markup=button.contact)
+    await message.answer(text='Консультация родителей по психо-эмоциональному  состоянию и развитию '
+                              'ребенка являются бесплатными. Для получения индивидуальной  психологической '
+                              'помощи отправьте сообщение на номер или отправь свои контактные данные нажав на кнопку'
+                              '\n+998 97 7888 79 44'
+                              '\n\'Отправить контактные данные\'', reply_markup=button.contact)
 
-@dp.message_handler(Text(equals=["Панель администратора"]),user_id=admin_id)
+
+@dp.message_handler(Text(equals=["Панель администратора"]), user_id=admin_id)
 async def button5(message: Message):
     await message.answer(text='Что хотите сделать?', reply_markup=button.adminpanel)
 
-@dp.message_handler(Text(equals=["Количество пользователей"]),user_id=admin_id)
+
+@dp.message_handler(Text(equals=["Количество пользователей"]), user_id=admin_id)
 async def button4(message: Message):
     info=db.get_userlist()
     info = [number_of_users[0] for number_of_users in info]
@@ -109,13 +110,13 @@ async def button4(message: Message):
 
 
 
-#Работал сдесь, смог получить файл и переотправить его по ид
-@dp.message_handler(content_types=['photo'])
+#Работал сдесь, смог получить файл и переотправить его по ид document и photo
+@dp.message_handler(content_types=['document'])
 async def documen(message:Message):
     print(message)
     user_id=message.from_user.id
-    file_id = message.photo[-1].file_id
-    # file_id=message.document.file_id
+    # file_id = message.photo[-1].file_id
+    file_id = message.document.file_id
     print(user_id)
     print(file_id)
 
@@ -132,8 +133,8 @@ async def documen(message:Message):
 async def admin(message: Message):
     TO_CHAT_ID3 = 635986455
     user_id =message.from_user.id
-    mes=message
-    mest=message.sticker.file_id
+    mes = message
+    mest = message.sticker.file_id
     print(mes)
     print(mest)
     await bot.send_sticker(message.from_user.id, 'CAACAgIAAxkBAAIV_189tLyJT_buUC4FYJQ1hu2BQft8AAImVAACns4LAAGgo10P151lvxsE')
@@ -141,6 +142,7 @@ async def admin(message: Message):
     # print(reply_to_message_id)
     # 1234217208
     await bot.delete_message(message.chat.id, message.message_id)
+
 
 @dp.message_handler(content_types=types.ContentType.CONTACT)
 async def get_contact(message:Message):

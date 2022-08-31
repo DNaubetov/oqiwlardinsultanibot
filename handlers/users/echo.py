@@ -4,12 +4,13 @@ from keyboards.default import button
 from loader import dp
 from config import admin_id
 
+
 @dp.message_handler()
 async def echo(message: Message):
 
-    user_id =message.from_user.id
-    mes=message
-    mest=message.text
+    user_id = message.from_user.id
+    mes = message
+    mest = message.text
     print(mes)
     print(user_id, mest)
     text = f"Вы написали: {message.text}!" \
